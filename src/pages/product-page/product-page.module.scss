@@ -1,0 +1,51 @@
+// product-page.scss
+.product {
+  .product-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    .product-image {
+      max-width: 400px;
+      max-height: 400px;
+      margin-right: 20px;
+    }
+
+    .product-details {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .product-price {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+
+      .product-availability {
+        font-size: 16px;
+        color: red;
+        margin-bottom: 5px;
+      }
+
+      .product-rating {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .product-specific {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .product-description {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

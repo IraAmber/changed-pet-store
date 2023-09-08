@@ -1,0 +1,33 @@
+// /* Стилі для стрілки "Наступний" */
+.sliderStyle {
+  width: 1200px;
+  height: 596px;
+  margin-top: 100px;
+
+  h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .cart {
+    width: 276px;
+    height: 516px;
+    border-radius: 4px;
+    margin: 8px;
+  }
+
+  .slick-next:before {
+    content: '>';
+    font-size: 40px;
+    color: red; /* Змініть колір на потрібний */
+  }
+
+  /* Стилі для стрілки "Попередній" */
+  .slick-prev:before {
+    content: '<';
+    font-size: 40px;
+    color: blue; /* Змініть колір на потрібний */
+  }
+}

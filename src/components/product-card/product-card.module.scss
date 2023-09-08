@@ -1,0 +1,76 @@
+.product-card {
+  width: 276px;
+  height: 516px;
+  border-radius: 4px;
+  margin: 0 16px;
+  position: relative;
+  background-color: #fefefe;
+  .product-image-container {
+    pointer-events: none; /* Відключаємо події миші для цього блоку */
+  }
+  .product-image {
+    width: 276px;
+    height: 276px;
+    pointer-events: auto;
+  }
+
+  .product-details {
+    width: 244px;
+    height: 126px;
+    font-family: Lato;
+    font-size: 21px;
+    font-weight: 600;
+    text-align: left;
+    color: #1b1b1b;
+    margin: 14px;
+
+    h6 {
+      width: 199px;
+      height: 56px;
+      margin: 0;
+      font-family: Lato;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .product-price {
+      color: #1b1b1b;
+    }
+
+    .product-rating {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+  .product-button {
+    width: 170px;
+    height: 48px;
+    padding: 12px 32px;
+    border-radius: 999px;
+    background: #ffad4d;
+    border: 1px solid #ffad4d;
+    font-family: Lato;
+    font-size: 21px;
+    text-align: center;
+    align-items: center;
+    color: #ffffff;
+    cursor: pointer;
+    &:hover {
+      background-color: #a36507;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #ccc;
+    }
+  }
+  .wishlist {
+    border: none;
+  }
+}

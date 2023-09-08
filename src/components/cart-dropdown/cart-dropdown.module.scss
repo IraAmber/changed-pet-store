@@ -1,0 +1,32 @@
+// src/components/cart-dropdown/cart-dropdown.styles.scss
+.cart-dropdown {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 240px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.cart-items {
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  .checkout-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #0063cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+}
