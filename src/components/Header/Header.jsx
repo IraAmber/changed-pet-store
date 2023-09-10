@@ -10,7 +10,7 @@ const Header = () => {
           <Link to="/">
             <img
               className={styles.logo}
-              src="https://online-shop-react.vercel.app/img/vigvam14.jpeg"
+              src="https://static.vecteezy.com/system/resources/previews/005/601/776/non_2x/pet-shop-logo-vector.jpg"
               alt="pets store logo"
             />
           </Link>
