@@ -1,14 +1,13 @@
 // src/App.js
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/navbar/Navbar'
+import Navbar from '../components/navbar/Navbar'
 
-import Cart from '../pages/Cart/Cart';
-import Cards from '../pages/Catalog'; 
-import Favourites from '../pages/Favourites/Favourites';
-import Error from '../components/Error/Error';
-
-
+import Cart from '../pages/Cart/Cart'
+import Catalog from '../pages/Catalog'
+import Favourites from '../pages/Favourites/Favourites'
+import Error from '../components/Error/Error'
+import Header from '../components/Header/Header'
 
 // import HomePage from './pages/homepage/homepage'
 // import ShopPage from './pages/shop/Shop'
@@ -18,26 +17,22 @@ import Error from '../components/Error/Error';
 // import ProductPage from './pages/product-page/Product-page' // Додали імпорт для ProductPage
 // import WishlistPage from './wishlist/WishlistPage'
 
+import Footer from '../pages/footer/footer'
 
-import Footer from './pages/footer/footer'
-
-
-
-
-import './App.css'
+import './App.module.scss'
 
 const App = () => {
   return (
     <Router>
       <div>
-        <Navbar />
+        <Header />
+        <h1>вітаю</h1>
+        {/* <Navbar /> */}
         <Routes>
-
-        <Route exact path="/" component={Cards} />
-        <Route exact path="/cart" component={Cart} />
-        <Route exact path="/favourites" component={Favourites} />
-        <Route path="/*" component={Error} />
-
+          <Route path="/" element={<Catalog />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/favourites" component={<Favourites />} />
+          <Route path="/*" component={<Error />} />
 
           {/* <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
@@ -45,13 +40,13 @@ const App = () => {
           {/* Змініть component на element */}
           {/* <Route path="/cart" element={<CartItem />} />
           <Route path="/product/:productId" element={<ProductPage />} />{' '}
-          <Route path="/wishlist" component={WishlistPage} /> */} 
+          <Route path="/wishlist" component={WishlistPage} /> */}
           {/* Додали маршрут для ProductPage */}
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   )
 }
 
-export default connect()(App)
+export default App
