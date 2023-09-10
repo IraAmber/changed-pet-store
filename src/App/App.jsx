@@ -8,6 +8,7 @@ import Catalog from '../pages/Catalog'
 import Favourites from '../pages/Favourites/Favourites'
 import Error from '../components/Error/Error'
 import Header from '../components/Header/Header'
+import { useSelector } from 'react-redux'
 
 // import HomePage from './pages/homepage/homepage'
 // import ShopPage from './pages/shop/Shop'
@@ -22,6 +23,8 @@ import Footer from '../pages/footer/footer'
 import './App.module.scss'
 
 const App = () => {
+  const cards = useSelector((state) => state.cards.cards) // Отримати дані карток товарів з Redux store
+
   return (
     <Router>
       <div>
