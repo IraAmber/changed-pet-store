@@ -14,6 +14,7 @@ const Favourites = () => {
   // Отримуємо стан з Redux за допомогою useSelector
   const isLoading = useSelector(({ cards }) => cards.isLoading)
   const cardsList = useSelector(({ cards }) => cards.cards)
+
   const cardsInFavorites = useSelector(({ favourites }) => favourites)
   const hasError = useSelector(({ hasError }) => hasError)
   const dispatch = useDispatch()

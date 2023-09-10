@@ -18,24 +18,22 @@ import { useSelector } from 'react-redux'
 // import ProductPage from './pages/product-page/Product-page' // Додали імпорт для ProductPage
 // import WishlistPage from './wishlist/WishlistPage'
 
-import Footer from '../pages/footer/footer'
-
+// import Footer from '../pages/footer/footer'
 import './App.module.scss'
 
 const App = () => {
-  const cards = useSelector((state) => state.cards.cards) // Отримати дані карток товарів з Redux store
+  // const cards = useSelector((state) => state.cards.cards) // Отримати дані карток товарів з Redux store
 
   return (
     <Router>
       <div>
         <Header />
-        <h1>вітаю</h1>
         {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Catalog />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/favourites" component={<Favourites />} />
-          <Route path="/*" component={<Error />} />
+          <Route path="/favourites" element={<Favourites />} />
+          <Route path="/*" element={<Error />} />
 
           {/* <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />

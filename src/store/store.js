@@ -1,4 +1,9 @@
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
+import {
+  legacy_createStore,
+  combineReducers,
+  applyMiddleware,
+  compose,
+} from 'redux'
 import thunk from 'redux-thunk'
 import { favouritesReducer } from './favourites/reducer'
 import { cartReducer } from './cart/reducer'
@@ -60,7 +65,7 @@ if (cardsInCartFromLS) {
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__
   ? window.__REDUX_DEVTOOLS_EXTENSION__()
   : (args) => args
-const store = createStore(
+const store = legacy_createStore(
   rootReducer,
   initialState,
   compose(applyMiddleware(thunk, syncMiddleware), devTools)
