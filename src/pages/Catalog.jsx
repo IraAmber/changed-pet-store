@@ -16,7 +16,6 @@ const Catalog = () => {
   const dispatch = useDispatch() // useDispatch дозволяє викликати actions у Redux store.
 
   useEffect(() => {
-    console.log('cardsList:', cardsList)
     // Використовуємо useEffect для виклику функції після рендерингу компоненту.
     // Тут ми викликаємо функцію fetchCardsList() для отримання списку карток з сервера.
     dispatch(fetchCardsList())
@@ -58,20 +57,11 @@ const Catalog = () => {
     )
   }
 
-  // return (
-  //   <div className={styles.app}>
-  //     <h1>перевірка шляхів</h1>
-  //     <div className={styles.container}>
-  //       <div className={styles.appInner}>{content}</div>
-  //     </div>
-  //   </div>
-  // )
-
   return (
     <div className={styles.app}>
       <div className={styles.container}>
         <div className={styles.appInner}>
-          {console.log('cardsList:', cardsList)}
+          {/* {console.log('cardsList:', cardsList)} */}
           {content}
         </div>
       </div>

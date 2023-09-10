@@ -3,7 +3,8 @@ import React from 'react'
 import styles from './Card.module.scss'
 import FavouriteIcon from './FavouriteIcon'
 import Button from '../Button/Button'
-const NOIMGSRC = 'img/notfound.png'
+const NOIMGSRC =
+  'https://e7.pngegg.com/pngimages/829/733/png-clipart-logo-brand-product-trademark-font-not-found-logo-brand.png'
 
 const Card = ({
   title,
@@ -21,7 +22,7 @@ const Card = ({
       <img
         className={styles.itemImg}
         src={imgSrc ? imgSrc : NOIMGSRC}
-        alt="bed for pets"
+        alt="eat for your pets"
       />
       <div className={styles.cardInfo}>
         <h2 className={styles.title}>{title}</h2>
