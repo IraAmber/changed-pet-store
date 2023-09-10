@@ -1,7 +1,7 @@
 // Ця функція отримує список карток з сервера
 export const getCardsList = async () => {
   // Відправляємо запит на сервер для отримання списку карток
-  const response = await fetch('./cardList.json')
+  const response = await fetch('./cardListMy.json')
 
   // Перевіряємо, чи запит був успішним (статус 200 OK)
   if (!response.ok) {

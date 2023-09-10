@@ -69,7 +69,6 @@ const Catalog = () => {
 
   return (
     <div className={styles.app}>
-      <h1>перевірка шляхів</h1>
       <div className={styles.container}>
         <div className={styles.appInner}>
           {console.log('cardsList:', cardsList)}
