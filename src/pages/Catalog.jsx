@@ -23,9 +23,14 @@ const Catalog = () => {
   }, []) // Передаємо пустий масив залежностей, щоб запустити цей ефект лише раз після першого рендеру.
 
   // Обробник для додавання карток до кошика за їхнім артикулом.
+  // const addCardsToCartHandler = (articul) => {
+  //   dispatch(addToCart(articul))
+  // }
   const addCardsToCartHandler = (articul) => {
-    dispatch(addToCart(articul))
-  }
+    const currentArticul = { currentArticul: articul }; // Створюємо об'єкт з currentArticul
+    dispatch(addToCart(currentArticul)); // Передаємо об'єкт в екшен addToCart
+}
+
 
   // Обробник для зміни статусу "улюблено" для карток за їхнім артикулом.
   const changeFavouriteHandler = (articul) => {
